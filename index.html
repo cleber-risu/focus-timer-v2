@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Timer V2 - Pomodoro</title>
+
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script type="module" src="./js/main.js" defer></script>
+</head>
+
+<body class="dark running">
+
+  <div id="app" class="container">
+    <div>
+      <button id="toggle-mode">
+        <span class="sr-only">ativar dark mode</span>
+        <i class="ph ph-sun"></i>
+        <i class="ph ph-moon"></i>
+      </button>
+
+      <section id="timer">
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </section>
+
+      <section id="control">
+        <button class="ph ph-play-circle">
+          <span class="sr-only">
+            Iniciar contador
+          </span>
+        </button>
+        <button class="ph ph-pause-circle">
+          <span class="sr-only">
+            Pausar contador
+          </span>
+        </button>
+        <button class="ph ph-timer">
+          <span class=" sr-only">
+            Ajustar contador
+          </span>
+        </button>
+        <button class="ph ph-stop-circle">
+          <span class="sr-only">
+            Reiniciar
+          </span>
+        </button>
+        <button class="ph ph-plus-circle">
+          <span class="sr-only">
+            Aumentar contador em mais 5 minutos
+          </span>
+        </button>
+        <button class="ph ph-minus-circle">
+          <span class="sr-only">
+            Reduzier contador em menos 5 minutos
+          </span>
+        </button>
+      </section>
+    </div>
+
+    <section id="bg-music">
+      <button class="ph ph-tree">
+        <span class="sr-only">
+          Som de floresta
+        </span>
+      </button>
+      <button class="ph ph-cloud-rain selected">
+        <span class="sr-only">
+          Som de chuba
+        </span>
+      </button>
+      <button class="ph ph-storefront">
+        <span class="sr-only">
+          Som de cafeteria
+        </span>
+      </button>
+      <button class="ph ph-flame">
+        <span class="sr-only">
+          Som de lareira
+        </span>
+      </button>
+    </section>
+
+  </div>
+
+</body>
+
+</html>

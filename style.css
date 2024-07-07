@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg-color: white;
+  --txt-color: #323238;
+  --txt-color-timer: var(--txt-color);
+
+  --control-bt-color: white;
+  --control-bt-color-play: #42D3FF;
+  --control-bt-color-stop: #FE4B4B;
+  --control-bg-color: #2E2E2E;
+
+  --bt-audio-bg-color: #E1E1E6;
+  --bt-audio-bg-color-select: #02799D;
+  --bt-audio-txt-color-select: white;
+}
+
+body.dark {
+  --bg-color: #1E1E1E;
+  --txt-color-timer: white;
+  --bt-audio-bg-color: white;
+}
+
+body,
+button {
+  font-family: sans-serif;
+}
+
+body.dark .ph-moon,
+body:not(.dark) .ph-sun {
+  display: none;
+}
+
+body {
+  background-color: var(--bg-color);
+
+  color: var(--txt-color);
+
+  height: 100vh;
+
+  display: grid;
+  place-items: center;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+#toggle-mode {
+  position: absolute;
+  top: 3.2rem;
+  right: 3.2rem;
+
+  line-height: 0;
+  font-size: 3.2rem;
+  color: var(--txt-color-timer);
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+
+  position: absolute;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 43rem;
+}
+
+#app {
+  display: grid;
+  justify-items: center;
+}
+
+/* timer */
+
+#timer {
+  font-size: 12rem;
+  font-weight: bold;
+  color: var(--txt-color-timer);
+
+  display: flex;
+  justify-content: center;
+}
+
+/* control */
+
+#control {
+  border-radius: 999rem;
+  background-color: var(--control-bg-color);
+
+  display: flex;
+  gap: 4rem;
+
+  padding: 2.2rem 3.2rem;
+  margin-top: .5rem;
+}
+
+#control button {
+  color: var(--control-bt-color);
+  font-size: 4.8rem;
+}
+
+#control button.ph-play-circle {
+  color: var(--control-bt-color-play);
+}
+
+#control button.ph-pause-circle {
+  color: var(--control-bt-color-play);
+}
+
+#control button.ph-timer {
+  color: var(--control-bt-color-stop);
+}
+
+#control button.ph-stop-circle {
+  color: var(--control-bt-color-stop);
+}
+
+/* bg music */
+
+#bg-music {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+
+  margin-top: 5rem;
+}
+
+#bg-music button {
+  border-radius: 2.4rem;
+  background-color: var(--bt-audio-bg-color);
+
+  width: 13.8rem;
+  height: 15.2rem;
+
+  font-size: 5.6rem;
+}
+
+#bg-music button.selected {
+  background-color: var(--bt-audio-bg-color-select);
+}
+
+.running .ph-play-circle,
+.running .ph-timer,
+body:not(.running) .ph-pause-circle,
+body:not(.running) .ph-stop-circle {
+  display: none;
+}
+
+/* media querie */
+
+@media (width >=1280px) {
+  #app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16rem;
+  }
+
+  .container {
+    width: 128rem;
+  }
+}
