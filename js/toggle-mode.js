@@ -7,9 +7,7 @@ buttonToggle.addEventListener("click", (even) => {
 
   const mode = lightMode ? "light" : "dark";
 
-  even.currentTarget.querySelector(
-    "span"
-  ).textContent = `${mode} mode ativado.`;
+  even.currentTarget.querySelector("span").textContent = `ativar ${mode} mode.`;
 
   lightMode = !lightMode;
 });

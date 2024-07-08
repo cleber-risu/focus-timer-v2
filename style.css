@@ -99,7 +99,7 @@ button {
 
 /* control */
 
-#control {
+#controls {
   border-radius: 999rem;
   background-color: var(--control-bg-color);
 
@@ -110,24 +110,24 @@ button {
   margin-top: .5rem;
 }
 
-#control button {
+#controls button {
   color: var(--control-bt-color);
   font-size: 4.8rem;
 }
 
-#control button.ph-play-circle {
+#controls button.ph-play-circle {
   color: var(--control-bt-color-play);
 }
 
-#control button.ph-pause-circle {
+#controls button.ph-pause-circle {
   color: var(--control-bt-color-play);
 }
 
-#control button.ph-timer {
+#controls button.ph-timer {
   color: var(--control-bt-color-stop);
 }
 
-#control button.ph-stop-circle {
+#controls button.ph-stop-circle {
   color: var(--control-bt-color-stop);
 }
 
@@ -151,20 +151,22 @@ button {
   font-size: 5.6rem;
 }
 
-#bg-music button.selected {
+#bg-music .selected {
   background-color: var(--bt-audio-bg-color-select);
 }
 
+/* #bg-music button:focus {
+  background-color: var(--bt-audio-bg-color-select);
+} */
+
 .running .ph-play-circle,
-.running .ph-timer,
-body:not(.running) .ph-pause-circle,
-body:not(.running) .ph-stop-circle {
+body:not(.running) .ph-pause-circle {
   display: none;
 }
 
 /* media querie */
 
-@media (width >=1280px) {
+@media (width >= 1280px) {
   #app {
     display: flex;
     align-items: center;

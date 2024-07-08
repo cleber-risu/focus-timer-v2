@@ -4,15 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Focus Timer V2 - Pomodoro</title>
 
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
   <link rel="stylesheet" href="./style.css">
 
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <script type="module" src="./js/main.js" defer></script>
 </head>
 
-<body class="dark running">
+<body class="">
 
   <div id="app" class="container">
     <div>
@@ -28,33 +30,28 @@
         <span id="seconds">00</span>
       </section>
 
-      <section id="control">
-        <button class="ph ph-play-circle">
+      <section id="controls">
+        <button data-action="toggleRunning" class="ph ph-play-circle">
           <span class="sr-only">
             Iniciar contador
           </span>
         </button>
-        <button class="ph ph-pause-circle">
+        <button data-action="toggleRunning" class="ph ph-pause-circle">
           <span class="sr-only">
             Pausar contador
           </span>
         </button>
-        <button class="ph ph-timer">
-          <span class=" sr-only">
-            Ajustar contador
-          </span>
-        </button>
-        <button class="ph ph-stop-circle">
+        <button data-action="reset" class="ph ph-stop-circle">
           <span class="sr-only">
             Reiniciar
           </span>
         </button>
-        <button class="ph ph-plus-circle">
+        <button data-action="addTime" class="ph ph-plus-circle">
           <span class="sr-only">
             Aumentar contador em mais 5 minutos
           </span>
         </button>
-        <button class="ph ph-minus-circle">
+        <button data-action="removeTime" class="ph ph-minus-circle">
           <span class="sr-only">
             Reduzier contador em menos 5 minutos
           </span>
@@ -63,26 +60,27 @@
     </div>
 
     <section id="bg-music">
-      <button class="ph ph-tree">
+      <button data-action="playBgMusicForest" class="ph ph-tree">
         <span class="sr-only">
           Som de floresta
         </span>
       </button>
-      <button class="ph ph-cloud-rain selected">
+      <button data-action="playBgMusicRain" class="ph ph-cloud-rain">
         <span class="sr-only">
           Som de chuba
         </span>
       </button>
-      <button class="ph ph-storefront">
+      <button data-action="playBgMusicCoffeeshop" class="ph ph-storefront">
         <span class="sr-only">
           Som de cafeteria
         </span>
       </button>
-      <button class="ph ph-flame">
+      <button data-action="playBgMusicFireplace" class="ph ph-flame">
         <span class="sr-only">
           Som de lareira
         </span>
       </button>
+
     </section>
 
   </div>
